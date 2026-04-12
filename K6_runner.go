@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"os/exec"
 	"regexp"
 	"strconv"
@@ -22,6 +23,52 @@ import (
 // ===================== GLOBALS =====================
 
 var db *sql.DB
+
+// ===================== LOGGER =====================
+
+type Logger struct {
+	file  *os.File
+	mutex sync.Mutex
+}
+
+func NewLogger(script string) *Logger {
+	os.MkdirAll("logs", os.ModePerm)
+
+	filePath := fmt.Sprintf("logs/%s.log", script)
+
+	file, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		fmt.Println("Error creating log file:", err)
+		return nil
+	}
+
+	return &Logger{file: file}
+}
+
+func (l *Logger) Log(script string, level string, message string) {
+	l.mutex.Lock()
+	defer l.mutex.Unlock()
+
+	timestamp := time.Now().Format("2006-01-02 15:04:05")
+
+	logJSON := map[string]interface{}{
+		"time":    timestamp,
+		"script":  script,
+		"level":   level,
+		"message": message,
+	}
+
+	jsonData, _ := json.Marshal(logJSON)
+
+	// File
+	l.file.WriteString(string(jsonData) + "\n")
+
+	// Terminal
+	fmt.Println(string(jsonData))
+
+	// Loki
+	pushLogToLoki(script, string(jsonData))
+}
 
 // ===================== METRICS =====================
 
@@ -87,7 +134,6 @@ func pushLogToLoki(script string, logLine string) {
 	}
 
 	jsonData, _ := json.Marshal(payload)
-
 	http.Post(url, "application/json", bytes.NewBuffer(jsonData))
 }
 
@@ -95,7 +141,6 @@ func pushLogToLoki(script string, logLine string) {
 
 func parseMetrics(line string, m *Metrics) {
 
-	// Parse total requests
 	if strings.Contains(line, "http_reqs") {
 		re := regexp.MustCompile(`http_reqs.*:\s+(\d+)`)
 		match := re.FindStringSubmatch(line)
@@ -105,44 +150,29 @@ func parseMetrics(line string, m *Metrics) {
 		}
 	}
 
-	// Parse latency - ENHANCED DEBUG
 	if strings.Contains(line, "http_req_duration") {
-		fmt.Println("🔍 FOUND http_req_duration line:", line)
 
-		// Extract avg
 		avgRe := regexp.MustCompile(`avg=([\d\.]+)([a-z]+)`)
 		avgMatch := avgRe.FindStringSubmatch(line)
 
 		if len(avgMatch) > 1 {
 			avg, _ := strconv.ParseFloat(avgMatch[1], 64)
-			unit := avgMatch[2]
-			// Convert to ms if needed
-			if unit == "s" {
+			if avgMatch[2] == "s" {
 				avg *= 1000
 			}
 			m.AvgLatency = avg
-			fmt.Println("✓ Parsed avg:", avg, "unit:", unit)
 		}
 
-		// Extract p(95) - Handles both format variations
-		// Match: p(95)=value followed by ms or s
-		p95Re := regexp.MustCompile(`p\(95\)\s*=\s*([\d\.]+)([a-z]+)`)
+		p95Re := regexp.MustCompile(`p$begin:math:text$95$end:math:text$\s*=\s*([\d\.]+)([a-z]+)`)
 		p95Match := p95Re.FindStringSubmatch(line)
 
 		if len(p95Match) > 1 {
 			p95, _ := strconv.ParseFloat(p95Match[1], 64)
-			unit := p95Match[2]
-			// Convert to ms if needed
-			if unit == "s" {
+			if p95Match[2] == "s" {
 				p95 *= 1000
 			}
 			m.P95Latency = p95
-			fmt.Println("✓ Parsed p95:", p95, "unit:", unit)
-		} else {
-			fmt.Println("✗ p95 regex did NOT match")
 		}
-
-		fmt.Println("DEBUG: Final metrics -> Avg:", m.AvgLatency, "P95:", m.P95Latency)
 	}
 }
 
@@ -161,7 +191,6 @@ func initDB() {
 }
 
 func storeMetrics(script string, m *Metrics) {
-
 	query := `
 	INSERT INTO metrics (time, script, requests, avg_latency, p95_latency)
 	VALUES (NOW(), $1, $2, $3, $4)
@@ -178,7 +207,13 @@ func storeMetrics(script string, m *Metrics) {
 func runK6(script string, wg *sync.WaitGroup) {
 	defer wg.Done()
 
-	fmt.Printf("🚀 Starting %s...\n", script)
+	logger := NewLogger(script)
+	if logger == nil {
+		return
+	}
+	defer logger.file.Close()
+
+	logger.Log(script, "INFO", "Starting execution")
 
 	cmd := exec.Command("k6", "run", script)
 
@@ -188,8 +223,6 @@ func runK6(script string, wg *sync.WaitGroup) {
 	cmd.Start()
 
 	metrics := &Metrics{}
-
-	// WaitGroup for goroutines to ensure they finish before we continue
 	var goroutineWg sync.WaitGroup
 
 	// STDOUT
@@ -199,10 +232,7 @@ func runK6(script string, wg *sync.WaitGroup) {
 		scanner := bufio.NewScanner(stdout)
 		for scanner.Scan() {
 			line := scanner.Text()
-
-			fmt.Printf("[%s] %s\n", script, line)
-			pushLogToLoki(script, line)
-
+			logger.Log(script, "INFO", line)
 			parseMetrics(line, metrics)
 		}
 	}()
@@ -213,16 +243,11 @@ func runK6(script string, wg *sync.WaitGroup) {
 		defer goroutineWg.Done()
 		scanner := bufio.NewScanner(stderr)
 		for scanner.Scan() {
-			errLine := scanner.Text()
-
-			fmt.Printf("[%s ERROR] %s\n", script, errLine)
-			pushLogToLoki(script, errLine)
+			logger.Log(script, "ERROR", scanner.Text())
 		}
 	}()
 
 	cmd.Wait()
-
-	// Wait for goroutines to finish reading output
 	goroutineWg.Wait()
 
 	// Prometheus
@@ -233,7 +258,7 @@ func runK6(script string, wg *sync.WaitGroup) {
 	// TimescaleDB
 	storeMetrics(script, metrics)
 
-	fmt.Printf("✅ Finished %s\n", script)
+	logger.Log(script, "INFO", "Execution completed")
 }
 
 // ===================== API =====================
@@ -243,24 +268,20 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 
 	err := json.NewDecoder(r.Body).Decode(&scripts)
 	if err != nil {
-		fmt.Println("❌ JSON decode error:", err)
 		http.Error(w, "Invalid request", 400)
 		return
 	}
 
-	fmt.Printf("🚀 Received request to run scripts: %v\n", scripts)
-
 	var wg sync.WaitGroup
 
 	for _, script := range scripts {
-		fmt.Printf("📝 Adding script to queue: %s\n", script)
 		wg.Add(1)
 		go runK6(script, &wg)
 	}
 
 	go func() {
 		wg.Wait()
-		fmt.Println("🎯 API-triggered run completed")
+		fmt.Println("🎯 All scripts completed")
 	}()
 
 	w.Write([]byte("✅ Execution started"))
@@ -270,10 +291,9 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	// Init DB
 	initDB()
 
-	// Metrics server (Prometheus)
+	// Prometheus
 	go func() {
 		mux := http.NewServeMux()
 		mux.Handle("/metrics", promhttp.Handler())
@@ -282,12 +302,10 @@ func main() {
 		http.ListenAndServe(":2112", mux)
 	}()
 
-	// API server
+	// API
 	mux := http.NewServeMux()
 	mux.HandleFunc("/run", runHandler)
 
 	fmt.Println("🚀 API running on :8080")
-	fmt.Println("➡️ Trigger: POST /run")
-
 	http.ListenAndServe(":8080", mux)
 }
