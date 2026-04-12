@@ -293,3 +293,19 @@ If you like this project:
 👉 Build further 💪
 
 ---
+
+## Screensots
+
+<img width="1502" height="863" alt="Screenshot 2026-04-12 at 8 12 59 PM" src="https://github.com/user-attachments/assets/0e0884c4-925b-4d5f-9a91-e8c5c124edfb" />
+
+
+<img width="1502" height="863" alt="Screenshot 2026-04-12 at 8 12 37 PM" src="https://github.com/user-attachments/assets/c699cae8-227a-4d0d-b796-5b803e262b0c" />
+
+
+<img width="1502" height="863" alt="Screenshot 2026-04-12 at 8 02 33 PM" src="https://github.com/user-attachments/assets/48ba74e1-391a-4814-ab01-2403a1a92354" />
+
+
+<img width="1502" height="823" alt="Screenshot 2026-04-12 at 8 02 15 PM" src="https://github.com/user-attachments/assets/19636314-aee6-4397-a58a-f84394b632d1" />
+
+
+---
