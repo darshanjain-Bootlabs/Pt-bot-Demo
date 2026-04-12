@@ -282,6 +282,17 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 	go func() {
 		wg.Wait()
 		fmt.Println("🎯 All scripts completed")
+
+		// Open log files on completion
+		for _, script := range scripts {
+			logPath := fmt.Sprintf("logs/%s.log", script)
+			cmd := exec.Command("open", logPath)
+			if err := cmd.Run(); err != nil {
+				fmt.Printf("⚠️ Could not open %s: %v\n", logPath, err)
+			} else {
+				fmt.Printf("📂 Opened: %s\n", logPath)
+			}
+		}
 	}()
 
 	w.Write([]byte("✅ Execution started"))

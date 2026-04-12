@@ -5,6 +5,8 @@ services:
     ports:
       - "8080:8080"
       - "2112:2112" # for Prometheus metrics later
+    volumes:
+      - ./logs:/app/logs
     depends_on:
       - prometheus
       - loki

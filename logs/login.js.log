@@ -1,0 +1,73 @@
+{"level":"INFO","message":"Starting execution","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"     execution: local","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"        script: login.js","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"        output: -","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"              * default: 10 looping VUs for 10s (gracefulStop: 30s)","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:52"}
+{"level":"INFO","message":"running (01.0s), 10/10 VUs, 0 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:52"}
+{"level":"INFO","message":"default   [  10% ] 10 VUs  01.0s/10s","script":"login.js","time":"2026-04-12 14:54:52"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:53"}
+{"level":"INFO","message":"running (02.0s), 10/10 VUs, 1 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:53"}
+{"level":"INFO","message":"default   [  20% ] 10 VUs  02.0s/10s","script":"login.js","time":"2026-04-12 14:54:53"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:54"}
+{"level":"INFO","message":"running (03.0s), 10/10 VUs, 10 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:54"}
+{"level":"INFO","message":"default   [  30% ] 10 VUs  03.0s/10s","script":"login.js","time":"2026-04-12 14:54:54"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:55"}
+{"level":"INFO","message":"running (04.0s), 10/10 VUs, 19 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:55"}
+{"level":"INFO","message":"default   [  40% ] 10 VUs  04.0s/10s","script":"login.js","time":"2026-04-12 14:54:55"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:56"}
+{"level":"INFO","message":"running (05.0s), 10/10 VUs, 28 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:56"}
+{"level":"INFO","message":"default   [  50% ] 10 VUs  05.0s/10s","script":"login.js","time":"2026-04-12 14:54:56"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:57"}
+{"level":"INFO","message":"running (06.0s), 10/10 VUs, 33 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:57"}
+{"level":"INFO","message":"default   [  60% ] 10 VUs  06.0s/10s","script":"login.js","time":"2026-04-12 14:54:57"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:58"}
+{"level":"INFO","message":"running (07.0s), 10/10 VUs, 41 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:58"}
+{"level":"INFO","message":"default   [  70% ] 10 VUs  07.0s/10s","script":"login.js","time":"2026-04-12 14:54:58"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:54:59"}
+{"level":"INFO","message":"running (08.0s), 10/10 VUs, 47 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:54:59"}
+{"level":"INFO","message":"default   [  80% ] 10 VUs  08.0s/10s","script":"login.js","time":"2026-04-12 14:54:59"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:00"}
+{"level":"INFO","message":"running (09.0s), 10/10 VUs, 53 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:55:00"}
+{"level":"INFO","message":"default   [  90% ] 10 VUs  09.0s/10s","script":"login.js","time":"2026-04-12 14:55:00"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:01"}
+{"level":"INFO","message":"running (10.0s), 10/10 VUs, 61 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:55:01"}
+{"level":"INFO","message":"default ↓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-12 14:55:01"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"running (11.0s), 00/10 VUs, 71 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"default ✓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     ✓ status is 200","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     checks.........................: 100.00% ✓ 71      ✗ 0   ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     data_received..................: 76 kB   6.9 kB/s","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     data_sent......................: 8.8 kB  798 B/s","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=129.11ms min=167ns    med=625ns    max=1.73s    p(90)=766.95ms p(95)=886.68ms","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_connecting............: avg=51.74ms  min=0s       med=0s       max=1.24s    p(90)=249.42ms p(95)=289.82ms","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_duration..............: avg=358.94ms min=228.66ms med=285.08ms max=1.59s    p(90)=546.33ms p(95)=909.8ms ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=358.94ms min=228.66ms med=285.08ms max=1.59s    p(90)=546.33ms p(95)=909.8ms ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_failed................: 0.00%   ✓ 0       ✗ 71  ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=1.25ms   min=16µs     med=126.87µs max=9.49ms   p(90)=4.43ms   p(95)=5.28ms  ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_sending...............: avg=112.09µs min=34.04µs  med=93.5µs   max=674.62µs p(90)=175.91µs p(95)=204.1µs ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=74.02ms  min=0s       med=0s       max=579.31ms p(90)=476.03ms p(95)=556.39ms","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=357.57ms min=227.45ms med=284.31ms max=1.59s    p(90)=545.15ms p(95)=909.3ms ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     http_reqs......................: 71      6.45862/s","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     iteration_duration.............: avg=1.48s    min=1.22s    med=1.28s    max=2.98s    p(90)=2.16s    p(95)=2.18s   ","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     iterations.....................: 71      6.45862/s","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     vus............................: 10      min=10    max=10","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"     vus_max........................: 10      min=10    max=10","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"running (11.0s), 00/10 VUs, 71 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"default ✓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"Execution completed","script":"login.js","time":"2026-04-12 14:55:03"}

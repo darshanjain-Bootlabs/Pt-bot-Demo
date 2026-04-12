@@ -1,0 +1,104 @@
+{"level":"INFO","message":"Starting execution","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:50"}
+{"level":"INFO","message":"     execution: local","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"        script: payment.js","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"        output: -","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 20 max VUs, 50s max duration (incl. graceful stop):","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"              * default: 20 looping VUs for 20s (gracefulStop: 30s)","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"ERROR","message":"time=\"2026-04-12T14:54:51Z\" level=warning msg=\"Error from API server\" error=\"listen tcp 127.0.0.1:6565: bind: address already in use\"","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:51"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:52"}
+{"level":"INFO","message":"running (01.0s), 20/20 VUs, 0 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:52"}
+{"level":"INFO","message":"default   [   5% ] 20 VUs  01.0s/20s","script":"payment.js","time":"2026-04-12 14:54:52"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:53"}
+{"level":"INFO","message":"running (02.0s), 20/20 VUs, 0 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:53"}
+{"level":"INFO","message":"default   [  10% ] 20 VUs  02.0s/20s","script":"payment.js","time":"2026-04-12 14:54:53"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:54"}
+{"level":"INFO","message":"running (03.0s), 20/20 VUs, 20 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:54"}
+{"level":"INFO","message":"default   [  15% ] 20 VUs  03.0s/20s","script":"payment.js","time":"2026-04-12 14:54:54"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:55"}
+{"level":"INFO","message":"running (04.0s), 20/20 VUs, 20 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:55"}
+{"level":"INFO","message":"default   [  20% ] 20 VUs  04.0s/20s","script":"payment.js","time":"2026-04-12 14:54:55"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:56"}
+{"level":"INFO","message":"running (05.0s), 20/20 VUs, 39 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:56"}
+{"level":"INFO","message":"default   [  25% ] 20 VUs  05.0s/20s","script":"payment.js","time":"2026-04-12 14:54:56"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:57"}
+{"level":"INFO","message":"running (06.0s), 20/20 VUs, 41 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:57"}
+{"level":"INFO","message":"default   [  30% ] 20 VUs  06.0s/20s","script":"payment.js","time":"2026-04-12 14:54:57"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:58"}
+{"level":"INFO","message":"running (07.0s), 20/20 VUs, 58 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:58"}
+{"level":"INFO","message":"default   [  35% ] 20 VUs  07.0s/20s","script":"payment.js","time":"2026-04-12 14:54:58"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:54:59"}
+{"level":"INFO","message":"running (08.0s), 20/20 VUs, 66 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:54:59"}
+{"level":"INFO","message":"default   [  40% ] 20 VUs  08.0s/20s","script":"payment.js","time":"2026-04-12 14:54:59"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:00"}
+{"level":"INFO","message":"running (09.0s), 20/20 VUs, 76 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:00"}
+{"level":"INFO","message":"default   [  45% ] 20 VUs  09.0s/20s","script":"payment.js","time":"2026-04-12 14:55:00"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:01"}
+{"level":"INFO","message":"running (10.0s), 20/20 VUs, 92 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:01"}
+{"level":"INFO","message":"default   [  50% ] 20 VUs  10.0s/20s","script":"payment.js","time":"2026-04-12 14:55:01"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"running (11.0s), 20/20 VUs, 98 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"default   [  55% ] 20 VUs  11.0s/20s","script":"payment.js","time":"2026-04-12 14:55:02"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:03"}
+{"level":"INFO","message":"running (12.0s), 20/20 VUs, 113 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:03"}
+{"level":"INFO","message":"default   [  60% ] 20 VUs  12.0s/20s","script":"payment.js","time":"2026-04-12 14:55:03"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:04"}
+{"level":"INFO","message":"running (13.0s), 20/20 VUs, 118 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:04"}
+{"level":"INFO","message":"default   [  65% ] 20 VUs  13.0s/20s","script":"payment.js","time":"2026-04-12 14:55:04"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:05"}
+{"level":"INFO","message":"running (14.0s), 20/20 VUs, 131 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:05"}
+{"level":"INFO","message":"default   [  70% ] 20 VUs  14.0s/20s","script":"payment.js","time":"2026-04-12 14:55:05"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:06"}
+{"level":"INFO","message":"running (15.0s), 20/20 VUs, 138 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:06"}
+{"level":"INFO","message":"default   [  75% ] 20 VUs  15.0s/20s","script":"payment.js","time":"2026-04-12 14:55:06"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:07"}
+{"level":"INFO","message":"running (16.0s), 20/20 VUs, 149 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:07"}
+{"level":"INFO","message":"default   [  80% ] 20 VUs  16.0s/20s","script":"payment.js","time":"2026-04-12 14:55:07"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:08"}
+{"level":"INFO","message":"running (17.0s), 20/20 VUs, 157 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:08"}
+{"level":"INFO","message":"default   [  85% ] 20 VUs  17.0s/20s","script":"payment.js","time":"2026-04-12 14:55:08"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:09"}
+{"level":"INFO","message":"running (18.0s), 20/20 VUs, 170 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:09"}
+{"level":"INFO","message":"default   [  90% ] 20 VUs  18.0s/20s","script":"payment.js","time":"2026-04-12 14:55:09"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:10"}
+{"level":"INFO","message":"running (19.0s), 20/20 VUs, 179 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:10"}
+{"level":"INFO","message":"default   [  95% ] 20 VUs  19.0s/20s","script":"payment.js","time":"2026-04-12 14:55:10"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:11"}
+{"level":"INFO","message":"running (20.0s), 20/20 VUs, 191 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:11"}
+{"level":"INFO","message":"default   [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-12 14:55:11"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"running (21.0s), 11/20 VUs, 200 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"default ↓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     ✓ status is 200","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     checks.........................: 100.00% ✓ 211     ✗ 0   ","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     data_received..................: 228 kB  10 kB/s","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     data_sent......................: 37 kB   1.7 kB/s","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=79.48ms  min=83ns     med=667ns    max=880.7ms  p(90)=1.87µs   p(95)=855.08ms","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_connecting............: avg=26.55ms  min=0s       med=0s       max=298.42ms p(90)=0s       p(95)=285.96ms","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_duration..............: avg=409.7ms  min=231.23ms med=287.37ms max=5.08s    p(90)=640.46ms p(95)=825.61ms","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=409.7ms  min=231.23ms med=287.37ms max=5.08s    p(90)=640.46ms p(95)=825.61ms","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_failed................: 0.00%   ✓ 0       ✗ 211 ","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=4.51ms   min=11.12µs  med=124.16µs max=727.1ms  p(90)=3.47ms   p(95)=5.45ms  ","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_sending...............: avg=150.92µs min=17.08µs  med=131.12µs max=1.29ms   p(90)=235.75µs p(95)=294.16µs","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=52.28ms  min=0s       med=0s       max=577.87ms p(90)=0s       p(95)=563.06ms","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=405.04ms min=230.3ms  med=286.41ms max=5.08s    p(90)=632.79ms p(95)=804.07ms","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     http_reqs......................: 211     9.67846/s","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     iteration_duration.............: avg=1.99s    min=1.73s    med=1.79s    max=6.58s    p(90)=2.53s    p(95)=2.65s   ","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     iterations.....................: 211     9.67846/s","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     vus............................: 11      min=11    max=20","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"     vus_max........................: 20      min=20    max=20","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"running (21.8s), 00/20 VUs, 211 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"default ✓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-12 14:55:12"}
+{"level":"INFO","message":"Execution completed","script":"payment.js","time":"2026-04-12 14:55:14"}
