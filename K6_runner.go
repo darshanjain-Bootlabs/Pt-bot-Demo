@@ -163,7 +163,7 @@ func parseMetrics(line string, m *Metrics) {
 			m.AvgLatency = avg
 		}
 
-		p95Re := regexp.MustCompile(`p$begin:math:text$95$end:math:text$\s*=\s*([\d\.]+)([a-z]+)`)
+		p95Re := regexp.MustCompile(`p\$95\$=\s*([\d\.]+)([a-z]+)`)
 		p95Match := p95Re.FindStringSubmatch(line)
 
 		if len(p95Match) > 1 {
