@@ -142,3 +142,108 @@
 {"level":"INFO","message":"running (34.1s), 00/30 VUs, 445 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-12 14:55:25"}
 {"level":"INFO","message":"default ✓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-12 14:55:25"}
 {"level":"INFO","message":"Execution completed","script":"search.js","time":"2026-04-12 14:55:26"}
+{"level":"INFO","message":"Starting execution","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:43"}
+{"level":"INFO","message":"     execution: local","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"        script: search.js","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"        output: -","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 30 max VUs, 45s max duration (incl. graceful stop):","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"ERROR","message":"time=\"2026-04-13T12:20:44Z\" level=warning msg=\"Error from API server\" error=\"listen tcp 127.0.0.1:6565: bind: address already in use\"","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"              * default: 30 looping VUs for 15s (gracefulStop: 30s)","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:44"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:45"}
+{"level":"INFO","message":"running (01.0s), 30/30 VUs, 0 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:45"}
+{"level":"INFO","message":"default   [   7% ] 30 VUs  01.0s/15s","script":"search.js","time":"2026-04-13 12:20:45"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:46"}
+{"level":"INFO","message":"running (02.0s), 30/30 VUs, 21 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:46"}
+{"level":"INFO","message":"default   [  13% ] 30 VUs  02.0s/15s","script":"search.js","time":"2026-04-13 12:20:46"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:47"}
+{"level":"INFO","message":"running (03.0s), 30/30 VUs, 48 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:47"}
+{"level":"INFO","message":"default   [  20% ] 30 VUs  03.0s/15s","script":"search.js","time":"2026-04-13 12:20:47"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:48"}
+{"level":"INFO","message":"running (04.0s), 30/30 VUs, 81 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:48"}
+{"level":"INFO","message":"default   [  27% ] 30 VUs  04.0s/15s","script":"search.js","time":"2026-04-13 12:20:48"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:49"}
+{"level":"INFO","message":"running (05.0s), 30/30 VUs, 118 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:49"}
+{"level":"INFO","message":"default   [  33% ] 30 VUs  05.0s/15s","script":"search.js","time":"2026-04-13 12:20:49"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:50"}
+{"level":"INFO","message":"running (06.0s), 30/30 VUs, 150 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:50"}
+{"level":"INFO","message":"default   [  40% ] 30 VUs  06.0s/15s","script":"search.js","time":"2026-04-13 12:20:50"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:51"}
+{"level":"INFO","message":"running (07.0s), 30/30 VUs, 180 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:51"}
+{"level":"INFO","message":"default   [  47% ] 30 VUs  07.0s/15s","script":"search.js","time":"2026-04-13 12:20:51"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:52"}
+{"level":"INFO","message":"running (08.0s), 30/30 VUs, 209 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:52"}
+{"level":"INFO","message":"default   [  53% ] 30 VUs  08.0s/15s","script":"search.js","time":"2026-04-13 12:20:52"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:53"}
+{"level":"INFO","message":"running (09.0s), 30/30 VUs, 246 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:53"}
+{"level":"INFO","message":"default   [  60% ] 30 VUs  09.0s/15s","script":"search.js","time":"2026-04-13 12:20:53"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:54"}
+{"level":"INFO","message":"running (10.0s), 30/30 VUs, 274 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:54"}
+{"level":"INFO","message":"default   [  67% ] 30 VUs  10.0s/15s","script":"search.js","time":"2026-04-13 12:20:54"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:55"}
+{"level":"INFO","message":"running (11.0s), 30/30 VUs, 306 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:55"}
+{"level":"INFO","message":"default   [  73% ] 30 VUs  11.0s/15s","script":"search.js","time":"2026-04-13 12:20:55"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:56"}
+{"level":"INFO","message":"running (12.0s), 30/30 VUs, 334 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:56"}
+{"level":"INFO","message":"default   [  80% ] 30 VUs  12.0s/15s","script":"search.js","time":"2026-04-13 12:20:56"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:57"}
+{"level":"INFO","message":"running (13.0s), 30/30 VUs, 365 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:57"}
+{"level":"INFO","message":"default   [  87% ] 30 VUs  13.0s/15s","script":"search.js","time":"2026-04-13 12:20:57"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:58"}
+{"level":"INFO","message":"running (14.0s), 30/30 VUs, 398 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:58"}
+{"level":"INFO","message":"default   [  93% ] 30 VUs  14.0s/15s","script":"search.js","time":"2026-04-13 12:20:58"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:20:59"}
+{"level":"INFO","message":"running (15.0s), 30/30 VUs, 425 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:20:59"}
+{"level":"INFO","message":"default   [ 100% ] 30 VUs  15.0s/15s","script":"search.js","time":"2026-04-13 12:20:59"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:00"}
+{"level":"INFO","message":"running (16.0s), 05/30 VUs, 450 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:00"}
+{"level":"INFO","message":"default ↓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:00"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:01"}
+{"level":"INFO","message":"running (17.0s), 02/30 VUs, 453 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:01"}
+{"level":"INFO","message":"default ↓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:01"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:02"}
+{"level":"INFO","message":"running (18.0s), 02/30 VUs, 453 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:02"}
+{"level":"INFO","message":"default ↓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:02"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:03"}
+{"level":"INFO","message":"running (19.0s), 02/30 VUs, 453 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:03"}
+{"level":"INFO","message":"default ↓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:03"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:04"}
+{"level":"INFO","message":"running (20.0s), 02/30 VUs, 453 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:04"}
+{"level":"INFO","message":"default ↓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:04"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"running (21.0s), 02/30 VUs, 453 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"default ↓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     ✗ status is 200","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"      ↳  99% — ✓ 453 / ✗ 2","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     checks.........................: 99.56% ✓ 453       ✗ 2   ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     data_received..................: 349 kB 17 kB/s","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     data_sent......................: 38 kB  1.8 kB/s","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=61.24ms  min=83ns     med=625ns    max=980.95ms p(90)=1.4µs    p(95)=895.62ms","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_connecting............: avg=20.83ms  min=0s       med=0s       max=317.56ms p(90)=0s       p(95)=314.24ms","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_duration..............: avg=483.09ms min=237.14ms med=284.83ms max=6.97s    p(90)=841.11ms p(95)=1.05s   ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=456.83ms min=237.14ms med=284.65ms max=6.97s    p(90)=831.06ms p(95)=1.01s   ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_failed................: 0.43%  ✓ 2         ✗ 453 ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=82.64µs  min=14.33µs  med=65.7µs   max=866.45µs p(90)=128.99µs p(95)=173.77µs","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_sending...............: avg=115.12µs min=18.5µs   med=100.91µs max=2.31ms   p(90)=178.49µs p(95)=220.5µs ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=39.21ms  min=0s       med=0s       max=648.39ms p(90)=0s       p(95)=560.12ms","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=482.89ms min=236.99ms med=284.54ms max=6.97s    p(90)=840.8ms  p(95)=1.05s   ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     http_reqs......................: 455    21.554502/s","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     iteration_duration.............: avg=1.04s    min=737.68ms med=797.34ms max=7.48s    p(90)=1.63s    p(95)=1.8s    ","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     iterations.....................: 455    21.554502/s","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     vus............................: 2      min=2       max=30","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"     vus_max........................: 30     min=30      max=30","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"running (21.1s), 00/30 VUs, 455 complete and 0 interrupted iterations","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"default ✓ [ 100% ] 30 VUs  15s","script":"search.js","time":"2026-04-13 12:21:05"}
+{"level":"INFO","message":"Execution completed","script":"search.js","time":"2026-04-13 12:21:06"}

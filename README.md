@@ -321,14 +321,30 @@ If you like this project:
 
 <img width="1502" height="863" alt="Screenshot 2026-04-12 at 8 12 59 PM" src="https://github.com/user-attachments/assets/0e0884c4-925b-4d5f-9a91-e8c5c124edfb" />
 
-
 <img width="1502" height="863" alt="Screenshot 2026-04-12 at 8 12 37 PM" src="https://github.com/user-attachments/assets/c699cae8-227a-4d0d-b796-5b803e262b0c" />
-
 
 <img width="1502" height="863" alt="Screenshot 2026-04-12 at 8 02 33 PM" src="https://github.com/user-attachments/assets/48ba74e1-391a-4814-ab01-2403a1a92354" />
 
-
 <img width="1502" height="823" alt="Screenshot 2026-04-12 at 8 02 15 PM" src="https://github.com/user-attachments/assets/19636314-aee6-4397-a58a-f84394b632d1" />
 
+---
+
+## How to use terminal to interact with the timescaledb
+
+```
+docker exec -it timescaledb psql -U postgres -d k6metrics
+
+k6metrics=# \dt
+          List of relations
+   Schema |  Name   | Type  |  Owner
+----------+---------+-------+----------
+ public  | metrics | table | postgres
+
+k6metrics=# SELECT * FROM metrics;
+              time               |   script    | requests | avg_latency | p95_latency
+-------------------------------+-------------+----------+-------------+-------------
+ 2024-01-15 14:23:01.123456+00 | load-test   |     1234 |       125.5 |         250
+
+```
 
 ---

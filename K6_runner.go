@@ -6,25 +6,22 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 	"os/exec"
-	"regexp"
-	"strconv"
 	"strings"
 	"sync"
 	"time"
 
 	_ "github.com/lib/pq"
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 // ===================== GLOBALS =====================
 
 var db *sql.DB
 
-// ===================== LOGGER =====================
+// ===================== LOGGER & LOKI =====================
 
 type Logger struct {
 	file  *os.File
@@ -33,8 +30,11 @@ type Logger struct {
 
 func NewLogger(script string) *Logger {
 	os.MkdirAll("logs", os.ModePerm)
+	// Clean the script path to create a safe file name
+	safeName := strings.ReplaceAll(script, "/", "_")
+	safeName = strings.ReplaceAll(safeName, ".js", "")
 
-	filePath := fmt.Sprintf("logs/%s.log", script)
+	filePath := fmt.Sprintf("logs/%s.log", safeName)
 
 	file, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
@@ -67,63 +67,19 @@ func (l *Logger) Log(script string, level string, message string) {
 	fmt.Println(string(jsonData))
 
 	// Loki
-	pushLogToLoki(script, string(jsonData))
+	go pushLogToLoki(script, string(jsonData))
 }
-
-// ===================== METRICS =====================
-
-var (
-	requestsGauge = prometheus.NewGaugeVec(
-		prometheus.GaugeOpts{
-			Name: "k6_requests_total",
-			Help: "Total requests per script",
-		},
-		[]string{"script"},
-	)
-
-	latencyGauge = prometheus.NewGaugeVec(
-		prometheus.GaugeOpts{
-			Name: "k6_latency_avg_ms",
-			Help: "Average latency per script",
-		},
-		[]string{"script"},
-	)
-
-	p95Gauge = prometheus.NewGaugeVec(
-		prometheus.GaugeOpts{
-			Name: "k6_latency_p95_ms",
-			Help: "P95 latency per script",
-		},
-		[]string{"script"},
-	)
-)
-
-func init() {
-	prometheus.MustRegister(requestsGauge)
-	prometheus.MustRegister(latencyGauge)
-	prometheus.MustRegister(p95Gauge)
-}
-
-// ===================== METRICS STRUCT =====================
-
-type Metrics struct {
-	Requests   int
-	AvgLatency float64
-	P95Latency float64
-}
-
-// ===================== LOKI =====================
 
 func pushLogToLoki(script string, logLine string) {
-	url := "http://loki:3100/loki/api/v1/push"
+	url := "http://localhost:3100/loki/api/v1/push" // Update to your Loki URL
 
-	timestamp := strconv.FormatInt(time.Now().UnixNano(), 10)
+	timestamp := fmt.Sprintf("%d", time.Now().UnixNano())
 
 	payload := map[string]interface{}{
 		"streams": []map[string]interface{}{
 			{
 				"stream": map[string]string{
-					"job":    "k6",
+					"job":    "k6-runner",
 					"script": script,
 				},
 				"values": [][]string{
@@ -137,49 +93,11 @@ func pushLogToLoki(script string, logLine string) {
 	http.Post(url, "application/json", bytes.NewBuffer(jsonData))
 }
 
-// ===================== PARSER =====================
-
-func parseMetrics(line string, m *Metrics) {
-
-	if strings.Contains(line, "http_reqs") {
-		re := regexp.MustCompile(`http_reqs.*:\s+(\d+)`)
-		match := re.FindStringSubmatch(line)
-		if len(match) > 1 {
-			val, _ := strconv.Atoi(match[1])
-			m.Requests = val
-		}
-	}
-
-	if strings.Contains(line, "http_req_duration") {
-
-		avgRe := regexp.MustCompile(`avg=([\d\.]+)([a-z]+)`)
-		avgMatch := avgRe.FindStringSubmatch(line)
-
-		if len(avgMatch) > 1 {
-			avg, _ := strconv.ParseFloat(avgMatch[1], 64)
-			if avgMatch[2] == "s" {
-				avg *= 1000
-			}
-			m.AvgLatency = avg
-		}
-
-		p95Re := regexp.MustCompile(`p\$95\$=\s*([\d\.]+)([a-z]+)`)
-		p95Match := p95Re.FindStringSubmatch(line)
-
-		if len(p95Match) > 1 {
-			p95, _ := strconv.ParseFloat(p95Match[1], 64)
-			if p95Match[2] == "s" {
-				p95 *= 1000
-			}
-			m.P95Latency = p95
-		}
-	}
-}
-
 // ===================== DB =====================
 
 func initDB() {
-	connStr := "postgres://postgres:password@timescaledb:5432/k6metrics?sslmode=disable"
+	// Update with your TimescaleDB credentials
+	connStr := "postgres://k6:k6password@localhost:5432/k6?sslmode=disable"
 
 	var err error
 	db, err = sql.Open("postgres", connStr)
@@ -187,53 +105,91 @@ func initDB() {
 		panic(err)
 	}
 
-	fmt.Println("✅ Connected to TimescaleDB")
-}
+	// Create table for final summaries
+	schema := `
+	CREATE TABLE IF NOT EXISTS test_runs (
+		id SERIAL PRIMARY KEY,
+		script_name TEXT,
+		status TEXT,
+		avg_latency FLOAT,
+		p95_latency FLOAT,
+		start_time TIMESTAMPTZ,
+		end_time TIMESTAMPTZ,
+		raw_summary JSONB
+	);`
 
-func storeMetrics(script string, m *Metrics) {
-	query := `
-	INSERT INTO metrics (time, script, requests, avg_latency, p95_latency)
-	VALUES (NOW(), $1, $2, $3, $4)
-	`
-
-	_, err := db.Exec(query, script, m.Requests, m.AvgLatency, m.P95Latency)
+	_, err = db.Exec(schema)
 	if err != nil {
-		fmt.Println("DB insert error:", err)
+		fmt.Printf("Failed to initialize database schema: %v\n", err)
+		os.Exit(1)
 	}
+
+	fmt.Println("✅ Connected to TimescaleDB and schema verified.")
 }
 
 // ===================== RUN K6 =====================
 
-func runK6(script string, wg *sync.WaitGroup) {
+func runK6(scriptPath string, wg *sync.WaitGroup) {
 	defer wg.Done()
 
-	logger := NewLogger(script)
+	logger := NewLogger(scriptPath)
 	if logger == nil {
 		return
 	}
 	defer logger.file.Close()
 
-	logger.Log(script, "INFO", "Starting execution")
+	logger.Log(scriptPath, "INFO", "Starting execution")
 
-	cmd := exec.Command("k6", "run", script)
+	// 1. Read the original script file
+	scriptContent, err := os.ReadFile(scriptPath)
+	if err != nil {
+		logger.Log(scriptPath, "ERROR", fmt.Sprintf("Could not read script: %v", err))
+		return
+	}
+
+	// 2. Inject the Javascript Hook
+	// This captures the final summary JSON and POSTs it back to our Go server
+	reportingJS := fmt.Sprintf(`
+	export function handleSummary(data) {
+		data.script_name = "%s";
+		const res = http.post("http://localhost:8080/internal/summary", JSON.stringify(data), {
+			headers: { "Content-Type": "application/json" },
+		});
+	}
+	`, scriptPath)
+
+	finalScript := string(scriptContent) + "\n" + reportingJS
+
+	// 3. Setup the Command with Prometheus Remote Write flag
+	cmd := exec.Command(
+		"k6", "run", "-",
+		"-o", "experimental-prometheus-rw",
+	)
+
+	// Feed the injected script via Stdin
+	cmd.Stdin = strings.NewReader(finalScript)
+
+	// Optional: Point k6 to your Prometheus server (Update URL if needed)
+	cmd.Env = append(os.Environ(), "K6_PROMETHEUS_RW_SERVER_URL=http://localhost:9090/api/v1/write")
 
 	stdout, _ := cmd.StdoutPipe()
 	stderr, _ := cmd.StderrPipe()
 
 	cmd.Start()
 
-	metrics := &Metrics{}
 	var goroutineWg sync.WaitGroup
 
-	// STDOUT
+	// STDOUT (Logs only, no regex parsing!)
 	goroutineWg.Add(1)
 	go func() {
 		defer goroutineWg.Done()
 		scanner := bufio.NewScanner(stdout)
 		for scanner.Scan() {
 			line := scanner.Text()
-			logger.Log(script, "INFO", line)
-			parseMetrics(line, metrics)
+			// Only log actual output, ignore the k6 logo banner
+			if strings.TrimSpace(line) != "" && !strings.Contains(line, "k6.io") {
+				logger.Log(scriptPath, "INFO", line)
+			}
 		}
 	}()
 
@@ -243,26 +199,19 @@ func runK6(script string, wg *sync.WaitGroup) {
 		defer goroutineWg.Done()
 		scanner := bufio.NewScanner(stderr)
 		for scanner.Scan() {
-			logger.Log(script, "ERROR", scanner.Text())
+			logger.Log(scriptPath, "ERROR", scanner.Text())
 		}
 	}()
 
 	cmd.Wait()
 	goroutineWg.Wait()
 
-	// Prometheus
-	requestsGauge.WithLabelValues(script).Set(float64(metrics.Requests))
-	latencyGauge.WithLabelValues(script).Set(metrics.AvgLatency)
-	p95Gauge.WithLabelValues(script).Set(metrics.P95Latency)
-
-	// TimescaleDB
-	storeMetrics(script, metrics)
-
-	logger.Log(script, "INFO", "Execution completed")
+	logger.Log(scriptPath, "INFO", "Execution completed")
 }
 
 // ===================== API =====================
 
+// Trigger tests
 func runHandler(w http.ResponseWriter, r *http.Request) {
 	var scripts []string
 
@@ -282,41 +231,63 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 	go func() {
 		wg.Wait()
 		fmt.Println("🎯 All scripts completed")
-
-		// Open log files on completion
-		for _, script := range scripts {
-			logPath := fmt.Sprintf("logs/%s.log", script)
-			cmd := exec.Command("open", logPath)
-			if err := cmd.Run(); err != nil {
-				fmt.Printf("⚠️ Could not open %s: %v\n", logPath, err)
-			} else {
-				fmt.Printf("📂 Opened: %s\n", logPath)
-			}
-		}
 	}()
 
 	w.Write([]byte("✅ Execution started"))
 }
 
+// Receive End-of-Test Summary from k6
+func summaryHandler(w http.ResponseWriter, r *http.Request) {
+	// Parse the massive JSON payload k6 sends at the end
+	var data struct {
+		ScriptName string `json:"script_name"`
+		Metrics    map[string]struct {
+			Values map[string]float64 `json:"values"`
+		} `json:"metrics"`
+	}
+
+	// Read body to bytes so we can save the raw JSON to the DB too
+	bodyBytes, _ := io.ReadAll(r.Body)
+	json.Unmarshal(bodyBytes, &data)
+
+	// Extract the specific metrics we care about for the database
+	var avgLatency, p95Latency float64
+	if reqDuration, exists := data.Metrics["http_req_duration"]; exists {
+		avgLatency = reqDuration.Values["avg"]
+		p95Latency = reqDuration.Values["p(95)"]
+	}
+
+	// Save to TimescaleDB
+	_, err := db.Exec(`
+		INSERT INTO test_runs (script_name, status, avg_latency, p95_latency, start_time, end_time, raw_summary)
+		VALUES ($1, 'COMPLETED', NOW() - INTERVAL '5 minutes', NOW(), $2, $3, $4)`, // Note: start_time is approximated here for simplicity
+		data.ScriptName,
+		avgLatency,
+		p95Latency,
+		bodyBytes,
+	)
+
+	if err != nil {
+		fmt.Printf("Error saving summary to DB: %v\n", err)
+		http.Error(w, "Error saving summary", 500)
+		return
+	}
+
+	fmt.Printf("📊 Summary saved to DB for: %s | P95: %.2fms\n", data.ScriptName, p95Latency)
+	w.WriteHeader(200)
+}
+
 // ===================== MAIN =====================
 
 func main() {
-
 	initDB()
 
-	// Prometheus
-	go func() {
-		mux := http.NewServeMux()
-		mux.Handle("/metrics", promhttp.Handler())
-
-		fmt.Println("📡 Metrics running on :2112")
-		http.ListenAndServe(":2112", mux)
-	}()
-
-	// API
 	mux := http.NewServeMux()
 	mux.HandleFunc("/run", runHandler)
+	mux.HandleFunc("/internal/summary", summaryHandler) // New endpoint for k6 hook
 
-	fmt.Println("🚀 API running on :8080")
+	fmt.Println("🚀 Runner Agent API running on :8080")
+	fmt.Println("➡️  Trigger tests via: POST /run")
+
 	http.ListenAndServe(":8080", mux)
 }
