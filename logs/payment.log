@@ -1,0 +1,158 @@
+{"level":"INFO","message":"Starting execution","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"     execution: local","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"        script: -","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"        output: Prometheus remote write (http://prometheus:9090/api/v1/write)","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 20 max VUs, 50s max duration (incl. graceful stop):","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"              * default: 20 looping VUs for 20s (gracefulStop: 30s)","script":"payment.js","time":"2026-04-14 10:43:32"}
+{"level":"INFO","message":"running (01.0s), 20/20 VUs, 0 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:33"}
+{"level":"INFO","message":"default   [   5% ] 20 VUs  01.0s/20s","script":"payment.js","time":"2026-04-14 10:43:33"}
+{"level":"INFO","message":"running (02.0s), 20/20 VUs, 0 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:34"}
+{"level":"INFO","message":"default   [  10% ] 20 VUs  02.0s/20s","script":"payment.js","time":"2026-04-14 10:43:34"}
+{"level":"INFO","message":"running (03.0s), 20/20 VUs, 19 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:35"}
+{"level":"INFO","message":"default   [  15% ] 20 VUs  03.0s/20s","script":"payment.js","time":"2026-04-14 10:43:35"}
+{"level":"INFO","message":"running (04.0s), 20/20 VUs, 20 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:36"}
+{"level":"INFO","message":"default   [  20% ] 20 VUs  04.0s/20s","script":"payment.js","time":"2026-04-14 10:43:36"}
+{"level":"INFO","message":"running (05.0s), 20/20 VUs, 38 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:37"}
+{"level":"INFO","message":"default   [  25% ] 20 VUs  05.0s/20s","script":"payment.js","time":"2026-04-14 10:43:37"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:43:37Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"payment.js","time":"2026-04-14 10:43:37"}
+{"level":"INFO","message":"running (06.0s), 20/20 VUs, 40 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:38"}
+{"level":"INFO","message":"default   [  30% ] 20 VUs  06.0s/20s","script":"payment.js","time":"2026-04-14 10:43:38"}
+{"level":"INFO","message":"running (07.0s), 20/20 VUs, 59 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:39"}
+{"level":"INFO","message":"default   [  35% ] 20 VUs  07.0s/20s","script":"payment.js","time":"2026-04-14 10:43:39"}
+{"level":"INFO","message":"running (08.0s), 20/20 VUs, 62 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:40"}
+{"level":"INFO","message":"default   [  40% ] 20 VUs  08.0s/20s","script":"payment.js","time":"2026-04-14 10:43:40"}
+{"level":"INFO","message":"running (09.0s), 20/20 VUs, 76 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:41"}
+{"level":"INFO","message":"default   [  45% ] 20 VUs  09.0s/20s","script":"payment.js","time":"2026-04-14 10:43:41"}
+{"level":"INFO","message":"running (10.0s), 20/20 VUs, 79 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:42"}
+{"level":"INFO","message":"default   [  50% ] 20 VUs  10.0s/20s","script":"payment.js","time":"2026-04-14 10:43:42"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:43:42Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"payment.js","time":"2026-04-14 10:43:42"}
+{"level":"INFO","message":"running (11.0s), 20/20 VUs, 91 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:43"}
+{"level":"INFO","message":"default   [  55% ] 20 VUs  11.0s/20s","script":"payment.js","time":"2026-04-14 10:43:43"}
+{"level":"INFO","message":"running (12.0s), 20/20 VUs, 96 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:44"}
+{"level":"INFO","message":"default   [  60% ] 20 VUs  12.0s/20s","script":"payment.js","time":"2026-04-14 10:43:44"}
+{"level":"INFO","message":"running (13.0s), 20/20 VUs, 104 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:45"}
+{"level":"INFO","message":"default   [  65% ] 20 VUs  13.0s/20s","script":"payment.js","time":"2026-04-14 10:43:45"}
+{"level":"INFO","message":"running (14.0s), 20/20 VUs, 113 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:46"}
+{"level":"INFO","message":"default   [  70% ] 20 VUs  14.0s/20s","script":"payment.js","time":"2026-04-14 10:43:46"}
+{"level":"INFO","message":"running (15.0s), 20/20 VUs, 122 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:47"}
+{"level":"INFO","message":"default   [  75% ] 20 VUs  15.0s/20s","script":"payment.js","time":"2026-04-14 10:43:47"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:43:47Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"payment.js","time":"2026-04-14 10:43:47"}
+{"level":"INFO","message":"running (16.0s), 20/20 VUs, 132 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:48"}
+{"level":"INFO","message":"default   [  80% ] 20 VUs  16.0s/20s","script":"payment.js","time":"2026-04-14 10:43:48"}
+{"level":"INFO","message":"running (17.0s), 20/20 VUs, 140 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:49"}
+{"level":"INFO","message":"default   [  85% ] 20 VUs  17.0s/20s","script":"payment.js","time":"2026-04-14 10:43:49"}
+{"level":"INFO","message":"running (18.0s), 20/20 VUs, 151 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:50"}
+{"level":"INFO","message":"default   [  90% ] 20 VUs  18.0s/20s","script":"payment.js","time":"2026-04-14 10:43:50"}
+{"level":"INFO","message":"running (19.0s), 20/20 VUs, 162 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:51"}
+{"level":"INFO","message":"default   [  95% ] 20 VUs  19.0s/20s","script":"payment.js","time":"2026-04-14 10:43:51"}
+{"level":"INFO","message":"running (20.0s), 20/20 VUs, 170 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:52"}
+{"level":"INFO","message":"default   [ 100% ] 20 VUs  20.0s/20s","script":"payment.js","time":"2026-04-14 10:43:52"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:43:52Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"payment.js","time":"2026-04-14 10:43:52"}
+{"level":"INFO","message":"running (21.0s), 07/20 VUs, 183 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:53"}
+{"level":"INFO","message":"default ↓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:43:53"}
+{"level":"INFO","message":"running (22.0s), 01/20 VUs, 189 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"default ↓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:43:54Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     ✗ status is 200","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"      ↳  99% — ✓ 189 / ✗ 1","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     checks.........................: 99.47% ✓ 189      ✗ 1   ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     data_received..................: 213 kB 9.7 kB/s","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     data_sent......................: 34 kB  1.5 kB/s","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=89.52ms  min=166ns    med=875ns    max=865.84ms p(90)=833.2ms  p(95)=855.31ms","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_connecting............: avg=32.13ms  min=0s       med=0s       max=306.06ms p(90)=304.21ms p(95)=305.42ms","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_duration..............: avg=595.36ms min=242.96ms med=306.45ms max=6.54s    p(90)=939.8ms  p(95)=1.41s   ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=565.82ms min=242.96ms med=304.58ms max=6.54s    p(90)=922.08ms p(95)=1.3s    ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_failed................: 0.52%  ✓ 1        ✗ 189 ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=460.31µs min=16.66µs  med=135.52µs max=5.99ms   p(90)=1.26ms   p(95)=1.76ms  ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_sending...............: avg=198.93µs min=35.79µs  med=169.35µs max=859.7µs  p(90)=321.5µs  p(95)=414.02µs","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=55.41ms  min=0s       med=0s       max=542.29ms p(90)=508.57ms p(95)=530.86ms","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=594.7ms  min=242.74ms med=305.91ms max=6.54s    p(90)=939.35ms p(95)=1.4s    ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     http_reqs......................: 190    8.637227/s","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     iteration_duration.............: avg=2.18s    min=1.74s    med=1.88s    max=8.04s    p(90)=2.63s    p(95)=2.99s   ","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     iterations.....................: 190    8.637227/s","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     vus............................: 1      min=1      max=20","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"     vus_max........................: 20     min=20     max=20","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"running (22.0s), 00/20 VUs, 190 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"default ✓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:43:54"}
+{"level":"INFO","message":"Execution completed","script":"payment.js","time":"2026-04-14 10:43:56"}
+{"level":"INFO","message":"Starting execution","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"     execution: local","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"        script: -","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"        output: Prometheus remote write (http://prometheus:9090/api/v1/write)","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 20 max VUs, 50s max duration (incl. graceful stop):","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"              * default: 20 looping VUs for 20s (gracefulStop: 30s)","script":"payment.js","time":"2026-04-14 10:56:08"}
+{"level":"INFO","message":"running (01.0s), 20/20 VUs, 0 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:09"}
+{"level":"INFO","message":"default   [   5% ] 20 VUs  01.0s/20s","script":"payment.js","time":"2026-04-14 10:56:09"}
+{"level":"INFO","message":"running (02.0s), 20/20 VUs, 0 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:10"}
+{"level":"INFO","message":"default   [  10% ] 20 VUs  02.0s/20s","script":"payment.js","time":"2026-04-14 10:56:10"}
+{"level":"INFO","message":"running (03.0s), 20/20 VUs, 19 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:11"}
+{"level":"INFO","message":"default   [  15% ] 20 VUs  03.0s/20s","script":"payment.js","time":"2026-04-14 10:56:11"}
+{"level":"INFO","message":"running (04.0s), 20/20 VUs, 20 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:12"}
+{"level":"INFO","message":"default   [  20% ] 20 VUs  04.0s/20s","script":"payment.js","time":"2026-04-14 10:56:12"}
+{"level":"INFO","message":"running (05.0s), 20/20 VUs, 40 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:13"}
+{"level":"INFO","message":"default   [  25% ] 20 VUs  05.0s/20s","script":"payment.js","time":"2026-04-14 10:56:13"}
+{"level":"INFO","message":"running (06.0s), 20/20 VUs, 41 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:14"}
+{"level":"INFO","message":"default   [  30% ] 20 VUs  06.0s/20s","script":"payment.js","time":"2026-04-14 10:56:14"}
+{"level":"INFO","message":"running (07.0s), 20/20 VUs, 60 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:15"}
+{"level":"INFO","message":"default   [  35% ] 20 VUs  07.0s/20s","script":"payment.js","time":"2026-04-14 10:56:15"}
+{"level":"INFO","message":"running (08.0s), 20/20 VUs, 66 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:16"}
+{"level":"INFO","message":"default   [  40% ] 20 VUs  08.0s/20s","script":"payment.js","time":"2026-04-14 10:56:16"}
+{"level":"INFO","message":"running (09.0s), 20/20 VUs, 80 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:17"}
+{"level":"INFO","message":"default   [  45% ] 20 VUs  09.0s/20s","script":"payment.js","time":"2026-04-14 10:56:17"}
+{"level":"INFO","message":"running (10.0s), 20/20 VUs, 89 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:18"}
+{"level":"INFO","message":"default   [  50% ] 20 VUs  10.0s/20s","script":"payment.js","time":"2026-04-14 10:56:18"}
+{"level":"INFO","message":"running (11.0s), 20/20 VUs, 100 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:19"}
+{"level":"INFO","message":"default   [  55% ] 20 VUs  11.0s/20s","script":"payment.js","time":"2026-04-14 10:56:19"}
+{"level":"INFO","message":"running (12.0s), 20/20 VUs, 112 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:20"}
+{"level":"INFO","message":"default   [  60% ] 20 VUs  12.0s/20s","script":"payment.js","time":"2026-04-14 10:56:20"}
+{"level":"INFO","message":"running (13.0s), 20/20 VUs, 120 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:21"}
+{"level":"INFO","message":"default   [  65% ] 20 VUs  13.0s/20s","script":"payment.js","time":"2026-04-14 10:56:21"}
+{"level":"INFO","message":"running (14.0s), 20/20 VUs, 136 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:22"}
+{"level":"INFO","message":"default   [  70% ] 20 VUs  14.0s/20s","script":"payment.js","time":"2026-04-14 10:56:22"}
+{"level":"INFO","message":"running (15.0s), 20/20 VUs, 140 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:23"}
+{"level":"INFO","message":"default   [  75% ] 20 VUs  15.0s/20s","script":"payment.js","time":"2026-04-14 10:56:23"}
+{"level":"INFO","message":"running (16.0s), 20/20 VUs, 158 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:24"}
+{"level":"INFO","message":"default   [  80% ] 20 VUs  16.0s/20s","script":"payment.js","time":"2026-04-14 10:56:24"}
+{"level":"INFO","message":"running (17.0s), 20/20 VUs, 162 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:25"}
+{"level":"INFO","message":"default   [  85% ] 20 VUs  17.0s/20s","script":"payment.js","time":"2026-04-14 10:56:25"}
+{"level":"INFO","message":"running (18.0s), 20/20 VUs, 177 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:26"}
+{"level":"INFO","message":"default   [  90% ] 20 VUs  18.0s/20s","script":"payment.js","time":"2026-04-14 10:56:26"}
+{"level":"INFO","message":"running (19.0s), 20/20 VUs, 181 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:27"}
+{"level":"INFO","message":"default   [  95% ] 20 VUs  19.0s/20s","script":"payment.js","time":"2026-04-14 10:56:27"}
+{"level":"INFO","message":"running (20.0s), 20/20 VUs, 199 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:28"}
+{"level":"INFO","message":"default ↓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:56:28"}
+{"level":"INFO","message":"running (21.0s), 16/20 VUs, 203 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:29"}
+{"level":"INFO","message":"default ↓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:56:29"}
+{"level":"INFO","message":"running (22.0s), 01/20 VUs, 218 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:30"}
+{"level":"INFO","message":"default ↓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:56:30"}
+{"level":"INFO","message":"     ✓ status is 200","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     checks.........................: 100.00% ✓ 219      ✗ 0   ","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     data_received..................: 233 kB  11 kB/s","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     data_sent......................: 38 kB   1.7 kB/s","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=72.5ms   min=83ns     med=667ns    max=829.09ms p(90)=1.61µs   p(95)=799.87ms","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_connecting............: avg=23.52ms  min=0s       med=0s       max=269.4ms  p(90)=0s       p(95)=259.28ms","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_duration..............: avg=366ms    min=226.15ms med=312ms    max=993.48ms p(90)=562.69ms p(95)=772.52ms","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=366ms    min=226.15ms med=312ms    max=993.48ms p(90)=562.69ms p(95)=772.52ms","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_failed................: 0.00%   ✓ 0        ✗ 219 ","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=1.3ms    min=16.08µs  med=125.54µs max=65.13ms  p(90)=3.63ms   p(95)=4.87ms  ","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_sending...............: avg=179.27µs min=21.45µs  med=145.79µs max=2.54ms   p(90)=276.98µs p(95)=332.8µs ","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=46.86ms  min=0s       med=0s       max=536.46ms p(90)=0s       p(95)=517.53ms","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=364.51ms min=225.96ms med=307.32ms max=993.12ms p(90)=560.99ms p(95)=772.13ms","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     http_reqs......................: 219     9.840117/s","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     iteration_duration.............: avg=1.94s    min=1.72s    med=1.83s    max=3.04s    p(90)=2.39s    p(95)=2.58s   ","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     iterations.....................: 219     9.840117/s","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     vus............................: 1       min=1      max=20","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"     vus_max........................: 20      min=20     max=20","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"running (22.3s), 00/20 VUs, 219 complete and 0 interrupted iterations","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"default ✓ [ 100% ] 20 VUs  20s","script":"payment.js","time":"2026-04-14 10:56:31"}
+{"level":"INFO","message":"Execution completed","script":"payment.js","time":"2026-04-14 10:56:32"}

@@ -1,0 +1,118 @@
+{"level":"INFO","message":"Starting execution","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"     execution: local","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"        script: -","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"        output: Prometheus remote write (http://prometheus:9090/api/v1/write)","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"              * default: 10 looping VUs for 10s (gracefulStop: 30s)","script":"login.js","time":"2026-04-14 10:32:25"}
+{"level":"INFO","message":"running (01.0s), 10/10 VUs, 0 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:26"}
+{"level":"INFO","message":"default   [  10% ] 10 VUs  01.0s/10s","script":"login.js","time":"2026-04-14 10:32:26"}
+{"level":"INFO","message":"running (02.0s), 10/10 VUs, 0 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:27"}
+{"level":"INFO","message":"default   [  20% ] 10 VUs  02.0s/10s","script":"login.js","time":"2026-04-14 10:32:27"}
+{"level":"INFO","message":"running (03.0s), 10/10 VUs, 9 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:28"}
+{"level":"INFO","message":"default   [  30% ] 10 VUs  03.0s/10s","script":"login.js","time":"2026-04-14 10:32:28"}
+{"level":"INFO","message":"running (04.0s), 10/10 VUs, 19 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:29"}
+{"level":"INFO","message":"default   [  40% ] 10 VUs  04.0s/10s","script":"login.js","time":"2026-04-14 10:32:29"}
+{"level":"INFO","message":"running (05.0s), 10/10 VUs, 23 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:30"}
+{"level":"INFO","message":"default   [  50% ] 10 VUs  05.0s/10s","script":"login.js","time":"2026-04-14 10:32:30"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:32:30Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"login.js","time":"2026-04-14 10:32:30"}
+{"level":"INFO","message":"running (06.0s), 10/10 VUs, 31 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:31"}
+{"level":"INFO","message":"default   [  60% ] 10 VUs  06.0s/10s","script":"login.js","time":"2026-04-14 10:32:31"}
+{"level":"INFO","message":"running (07.0s), 10/10 VUs, 39 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:32"}
+{"level":"INFO","message":"default   [  70% ] 10 VUs  07.0s/10s","script":"login.js","time":"2026-04-14 10:32:32"}
+{"level":"INFO","message":"running (08.0s), 10/10 VUs, 46 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:33"}
+{"level":"INFO","message":"default   [  80% ] 10 VUs  08.0s/10s","script":"login.js","time":"2026-04-14 10:32:33"}
+{"level":"INFO","message":"running (09.0s), 10/10 VUs, 55 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:34"}
+{"level":"INFO","message":"default   [  90% ] 10 VUs  09.0s/10s","script":"login.js","time":"2026-04-14 10:32:34"}
+{"level":"INFO","message":"running (10.0s), 10/10 VUs, 59 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:35"}
+{"level":"INFO","message":"default ↓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:32:35"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:32:35Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"login.js","time":"2026-04-14 10:32:35"}
+{"level":"INFO","message":"running (11.0s), 02/10 VUs, 67 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:36"}
+{"level":"INFO","message":"default ↓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:32:36"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:32:37Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     ✓ status is 200","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     checks.........................: 100.00% ✓ 69       ✗ 0   ","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     data_received..................: 75 kB   6.8 kB/s","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     data_sent......................: 8.7 kB  782 B/s","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=114.33ms min=208ns    med=625ns    max=824.73ms p(90)=767.46ms p(95)=811.72ms","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_connecting............: avg=37.21ms  min=0s       med=0s       max=269.89ms p(90)=246.13ms p(95)=266.47ms","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_duration..............: avg=407.73ms min=231.73ms med=269.13ms max=1.97s    p(90)=701.52ms p(95)=988.25ms","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=407.73ms min=231.73ms med=269.13ms max=1.97s    p(90)=701.52ms p(95)=988.25ms","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_failed................: 0.00%   ✓ 0        ✗ 69  ","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=252.02µs min=31.83µs  med=69.95µs  max=5.83ms   p(90)=148.71µs p(95)=1.11ms  ","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_sending...............: avg=103.43µs min=33.58µs  med=90.83µs  max=315.41µs p(90)=152.33µs p(95)=268.34µs","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=74.21ms  min=0s       med=0s       max=534.8ms  p(90)=501.32ms p(95)=525.24ms","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=407.38ms min=231.55ms med=268.37ms max=1.97s    p(90)=701.33ms p(95)=988ms   ","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     http_reqs......................: 69      6.214465/s","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     iteration_duration.............: avg=1.52s    min=1.23s    med=1.29s    max=3.79s    p(90)=2.1s     p(95)=2.16s   ","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     iterations.....................: 69      6.214465/s","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     vus............................: 2       min=2      max=10","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"     vus_max........................: 10      min=10     max=10","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"running (11.1s), 00/10 VUs, 69 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"default ✓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:32:37"}
+{"level":"INFO","message":"Execution completed","script":"login.js","time":"2026-04-14 10:32:39"}
+{"level":"INFO","message":"Starting execution","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"          /\\      |‾‾| /‾‾/   /‾‾/   ","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"     /\\  /  \\     |  |/  /   /  /    ","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"    /  \\/    \\    |     (   /   ‾‾\\  ","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"   /          \\   |  |\\  \\ |  (‾)  | ","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"  / __________ \\  |__| \\__\\ \\_____/ .io","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"     execution: local","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"        script: -","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"        output: Prometheus remote write (http://prometheus:9090/api/v1/write)","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"     scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"              * default: 10 looping VUs for 10s (gracefulStop: 30s)","script":"login.js","time":"2026-04-14 10:42:10"}
+{"level":"INFO","message":"running (01.0s), 10/10 VUs, 0 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:11"}
+{"level":"INFO","message":"default   [  10% ] 10 VUs  01.0s/10s","script":"login.js","time":"2026-04-14 10:42:11"}
+{"level":"INFO","message":"running (02.0s), 10/10 VUs, 0 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:12"}
+{"level":"INFO","message":"default   [  20% ] 10 VUs  02.0s/10s","script":"login.js","time":"2026-04-14 10:42:12"}
+{"level":"INFO","message":"running (03.0s), 10/10 VUs, 10 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:13"}
+{"level":"INFO","message":"default   [  30% ] 10 VUs  03.0s/10s","script":"login.js","time":"2026-04-14 10:42:13"}
+{"level":"INFO","message":"running (04.0s), 10/10 VUs, 20 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:14"}
+{"level":"INFO","message":"default   [  40% ] 10 VUs  04.0s/10s","script":"login.js","time":"2026-04-14 10:42:14"}
+{"level":"INFO","message":"running (05.0s), 10/10 VUs, 28 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:15"}
+{"level":"INFO","message":"default   [  50% ] 10 VUs  05.0s/10s","script":"login.js","time":"2026-04-14 10:42:15"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:42:15Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"login.js","time":"2026-04-14 10:42:15"}
+{"level":"INFO","message":"running (06.0s), 10/10 VUs, 32 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:16"}
+{"level":"INFO","message":"default   [  60% ] 10 VUs  06.0s/10s","script":"login.js","time":"2026-04-14 10:42:16"}
+{"level":"INFO","message":"running (07.0s), 10/10 VUs, 39 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:17"}
+{"level":"INFO","message":"default   [  70% ] 10 VUs  07.0s/10s","script":"login.js","time":"2026-04-14 10:42:17"}
+{"level":"INFO","message":"running (08.0s), 10/10 VUs, 48 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:18"}
+{"level":"INFO","message":"default   [  80% ] 10 VUs  08.0s/10s","script":"login.js","time":"2026-04-14 10:42:18"}
+{"level":"INFO","message":"running (09.0s), 10/10 VUs, 56 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:19"}
+{"level":"INFO","message":"default   [  90% ] 10 VUs  09.0s/10s","script":"login.js","time":"2026-04-14 10:42:19"}
+{"level":"INFO","message":"running (10.0s), 10/10 VUs, 62 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:20"}
+{"level":"INFO","message":"default   [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:42:20"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:42:20Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"login.js","time":"2026-04-14 10:42:20"}
+{"level":"INFO","message":"running (11.0s), 05/10 VUs, 67 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:21"}
+{"level":"INFO","message":"default ↓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:42:21"}
+{"level":"INFO","message":"running (12.0s), 02/10 VUs, 70 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:22"}
+{"level":"INFO","message":"default ↓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:42:22"}
+{"level":"INFO","message":"running (13.0s), 02/10 VUs, 70 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:23"}
+{"level":"INFO","message":"default ↓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:42:23"}
+{"level":"ERROR","message":"time=\"2026-04-14T10:42:24Z\" level=error msg=\"Failed to send the time series data to the endpoint\" error=\"got status code: 404 instead expected a 2xx successful status code\" output=\"Prometheus remote write\"","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     ✓ status is 200","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     checks.........................: 100.00% ✓ 72       ✗ 0   ","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     data_received..................: 76 kB   5.5 kB/s","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     data_sent......................: 8.8 kB  632 B/s","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_blocked...............: avg=113.56ms min=208ns    med=542ns    max=846.79ms p(90)=805.97ms p(95)=827.14ms","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_connecting............: avg=36.78ms  min=0s       med=0s       max=275.26ms p(90)=261.06ms p(95)=265.74ms","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_duration..............: avg=447.67ms min=245.91ms med=273.31ms max=4.04s    p(90)=702.45ms p(95)=996.71ms","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"       { expected_response:true }...: avg=447.67ms min=245.91ms med=273.31ms max=4.04s    p(90)=702.45ms p(95)=996.71ms","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_failed................: 0.00%   ✓ 0        ✗ 72  ","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_receiving.............: avg=2.05ms   min=30.12µs  med=613.68µs max=8.58ms   p(90)=6.53ms   p(95)=7.65ms  ","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_sending...............: avg=116.52µs min=44.41µs  med=112.08µs max=443.45µs p(90)=159.06µs p(95)=199.23µs","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_tls_handshaking.......: avg=72.93ms  min=0s       med=0s       max=543.9ms  p(90)=517.28ms p(95)=533.71ms","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_req_waiting...............: avg=445.49ms min=244.62ms med=270.9ms  max=4.03s    p(90)=702.14ms p(95)=996.52ms","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     http_reqs......................: 72      5.160005/s","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     iteration_duration.............: avg=1.56s    min=1.25s    med=1.29s    max=5.04s    p(90)=2.1s     p(95)=2.11s   ","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     iterations.....................: 72      5.160005/s","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     vus............................: 2       min=2      max=10","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"     vus_max........................: 10      min=10     max=10","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"running (14.0s), 00/10 VUs, 72 complete and 0 interrupted iterations","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"default ✓ [ 100% ] 10 VUs  10s","script":"login.js","time":"2026-04-14 10:42:24"}
+{"level":"INFO","message":"Execution completed","script":"login.js","time":"2026-04-14 10:42:26"}

@@ -1,0 +1,4 @@
+{"level":"INFO","message":"Starting execution","script":"/scripts/login.js","time":"2026-04-14 11:46:08"}
+{"level":"ERROR","message":"Could not read script: open /scripts/login.js: no such file or directory","script":"/scripts/login.js","time":"2026-04-14 11:46:08"}
+{"level":"INFO","message":"Starting execution","script":"/scripts/login.js","time":"2026-04-14 17:43:55"}
+{"level":"ERROR","message":"Could not read script: open /scripts/login.js: no such file or directory","script":"/scripts/login.js","time":"2026-04-14 17:43:55"}

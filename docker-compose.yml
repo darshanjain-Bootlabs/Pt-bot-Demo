@@ -4,12 +4,14 @@ services:
     container_name: go-k6-runner
     ports:
       - "8080:8080"
-      - "2112:2112" # for Prometheus metrics later
+      - "2112:2112"
     volumes:
       - ./logs:/app/logs
+      - ./scripts:/app/scripts
     depends_on:
       - prometheus
       - loki
+      - timescaledb
 
   prometheus:
     image: prom/prometheus
@@ -18,6 +20,9 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--web.enable-remote-write-receiver"
 
   loki:
     image: grafana/loki:2.9.0
@@ -37,6 +42,7 @@ services:
     depends_on:
       - prometheus
       - loki
+      - timescaledb
 
   timescaledb:
     image: timescale/timescaledb:latest-pg14
