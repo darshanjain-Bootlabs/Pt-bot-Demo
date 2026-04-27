@@ -359,7 +359,7 @@ func GenerateAISummaryActivity(ctx context.Context, data MetricsData) (string, e
 func SendSlackAlertActivity(ctx context.Context, summary string) error {
 	fmt.Println("\n==================================================")
 	fmt.Printf("🔔 [SLACK ALERT TRIGGERED]\n%s\n", summary)
-	fmt.Println("==================================================\n")
+	fmt.Println("==================================================")
 	return nil
 }
 
